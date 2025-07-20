@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>vishruti ranjan</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1">
     <meta charset="UTF-8">
 </head>
 <body>
@@ -54,5 +54,24 @@
         <p> to be completed...</p>
     </section>
         
+
+    <footer>
+        <p id="last updated"></p>
+    </footer>
+
+    <script>
+        const lastUpdated = new Date(document.lastModified);
+        const formatted = lastUpdated.toLocaleString(undefined, {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+        document.getElementById("last-updated").textContent =
+        "last updated: " + formatted;
+</script>
+
+
 </body>
 </html>
