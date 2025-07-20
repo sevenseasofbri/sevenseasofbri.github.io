@@ -1,0 +1,66 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Comic Sans MS", "Comic Neue", cursive, sans-serif;
+    background: white;
+    color: black;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #d2b3f2;
+    border-bottom: 2px dashed #999;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #6a5acd; /* a stronger lavender (SlateBlue) for hover */
+}
+
+section {
+    padding: 100px 20px 60px;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+section h2 {
+    color: #6a5acd;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+ul, ol {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+p, li {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
