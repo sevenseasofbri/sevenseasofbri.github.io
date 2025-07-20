@@ -57,9 +57,7 @@
 
     <footer>
         <p id="last updated"></p>
-    </footer>
-
-    <script>
+            <script>
         const lastUpdated = new Date(document.lastModified);
         const formatted = lastUpdated.toLocaleString(undefined, {
             year: 'numeric',
@@ -71,6 +69,7 @@
         document.getElementById("last-updated").textContent =
         "last updated: " + formatted;
 </script>
+    </footer>
 
 
 </body>
