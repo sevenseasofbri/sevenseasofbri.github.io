@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: "Comic Sans MS", "Comic Neue", cursive, sans-serif;
+    font-family: "Comic Sans MS", "Comic Neue", sans-serif;
     background: white;
     color: black;
 }
