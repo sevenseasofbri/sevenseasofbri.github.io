@@ -1,8 +1,13 @@
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url("fonts/comici.ttf");
+}
+
 body, html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: "Comic Sans MS", "Comic Neue", sans-serif;
+    font-family: "Comic Sans MS";
     background: white;
     color: black;
 }
