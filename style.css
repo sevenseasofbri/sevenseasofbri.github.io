@@ -51,6 +51,59 @@ section {
     text-align: left;
 }
 
+#noodle-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+#noodle-canvas {
+    border: 2px solid #a29ad3;
+    border-radius: 10px;
+    background: white;
+    cursor: grab;
+    max-width: 100%;
+    height: auto;
+}
+
+#noodle-canvas:active {
+    cursor: grabbing;
+}
+
+body.disco-mode {
+    animation: disco-bg 0.1s infinite;
+}
+
+@keyframes disco-bg {
+    0% { background-color: #ff00ff; }
+    25% { background-color: #00ffff; }
+    50% { background-color: #ffff00; }
+    75% { background-color: #00ff00; }
+    100% { background-color: #ff0088; }
+}
+
+body.disco-mode nav {
+    animation: disco-nav 0.1s infinite;
+}
+
+@keyframes disco-nav {
+    0% { background-color: #ff00ff; }
+    25% { background-color: #00ffff; }
+    50% { background-color: #ffff00; }
+    75% { background-color: #00ff00; }
+    100% { background-color: #ff0088; }
+}
+
+body.disco-mode section {
+    animation: disco-text 0.15s infinite;
+}
+
+@keyframes disco-text {
+    0%, 100% { color: black; text-shadow: 0 0 10px #ff00ff; }
+    50% { color: white; text-shadow: 0 0 20px #00ffff; }
+}
+    
+
 section h2 {
     color: #6a5acd;
     border-bottom: 1px dashed #ccc;
@@ -68,6 +121,46 @@ ul, ol {
 p, li {
     font-size: 1.1em;
     line-height: 1.6;
+}
+
+.research-list {
+    /* max-width: 900px; */
+}
+
+.publication {
+    border-bottom: 1px dashed #ccc;
+    padding: 0 0 22px;
+    margin-bottom: 26px;
+}
+
+.publication:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.publication h3 {
+    margin: 0 0 8px;
+    color: #857cc5;
+    font-size: 1.1em;
+    line-height: 1.35;
+}
+
+.publication h3 a {
+    color: inherit;
+}
+
+.publication p {
+    margin: 8px 0;
+}
+
+.publication-authors,
+.publication-meta,
+.publication-links {
+    color: #555;
+}
+
+.publication-links a {
+    margin-right: 12px;
 }
 
 footer {

@@ -1,0 +1,40 @@
+[
+  {
+    "title": "COMPOSE: Static Timing-driven Composable Reconfigurable Architecture for Accelerating Recurrence-Bound Loops",
+    "authors": [
+      "Rohan Juneja",
+      "Vishruti Ranjan",
+      "Rakshith Harish",
+      "Li-Shiuan Peh"
+    ],
+    "publicationDate": "2026-06-19",
+    "venue": "arXiv preprint arXiv:2606.21454",
+    "summary": "Introduces COMPOSE, a composable CGRA architecture that uses static timing information to fuse operations across loop iterations, reduce register pressure, and improve throughput for recurrence-bound loops.",
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://arxiv.org/abs/2606.21454"
+      },
+      {
+        "label": "pdf",
+        "url": "https://arxiv.org/pdf/2606.21454"
+      }
+    ]
+  },
+  {
+    "title": "Wearable Electrotactile Feedback for Motor Skill Acquisition",
+    "authors": [
+      "Vishruti Ranjan"
+    ],
+    "publicationDate": "2026-02-18",
+    "venue": "Proceedings of the 57th ACM Technical Symposium on Computer Science Education V. 2",
+    "pages": "1750",
+    "summary": "Explores wearable electrotactile feedback as a scalable embodied learning aid for dexterous classroom skills, with a focus on unobtrusive closed-loop systems informed by EMG-based muscle synergy analysis.",
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://dl.acm.org/doi/abs/10.1145/3770761.3777060"
+      }
+    ]
+  }
+]
