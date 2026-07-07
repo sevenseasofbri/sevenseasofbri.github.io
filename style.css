@@ -24,13 +24,15 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
     justify-content: center;
     margin: 0;
     padding: 10px 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0;
 }
 
 nav ul li a {
@@ -42,6 +44,13 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #6a5acd; /* a stronger lavender (SlateBlue) for hover */
+}
+
+nav ul li a.active {
+    color: #6a5acd;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 4px;
 }
 
 section {
@@ -161,6 +170,86 @@ p, li {
 
 .publication-links a {
     margin-right: 12px;
+}
+
+.blog-page section {
+    max-width: 850px;
+}
+
+.blog-post-list {
+    max-width: 850px;
+}
+
+.blog-post-preview {
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 26px;
+    padding-bottom: 24px;
+}
+
+.blog-post-preview:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.blog-post-summary {
+    cursor: pointer;
+    display: block;
+    list-style: none;
+    padding-right: 34px;
+    position: relative;
+}
+
+.blog-post-summary::-webkit-details-marker {
+    display: none;
+}
+
+.blog-post-summary::after {
+    color: #6a5acd;
+    content: "(⁠^⁠ᴗ⁠^✿⁠)";
+    font-size: 1.4em;
+    line-height: 1;
+    position: absolute;
+    right: 4px;
+    top: 6px;
+}
+
+.blog-post-preview[open] .blog-post-summary::after {
+    content: "(⁠◕⁠ᴗ⁠◕⁠✿⁠)";
+}
+
+.blog-post-summary:hover h3 {
+    color: #6a5acd;
+}
+
+.blog-post-preview h3 {
+    color: #857cc5;
+    font-size: 1.2em;
+    line-height: 1.35;
+    margin: 4px 0 8px;
+}
+
+.blog-post-preview p {
+    margin: 8px 0;
+}
+
+.blog-post-date {
+    color: #555;
+    font-size: 0.95em;
+}
+
+.blog-post-tags {
+    color: #6a5acd;
+    font-size: 0.95em;
+}
+
+.blog-post-body {
+    border-left: 2px dashed #ccc;
+    margin: 16px 0 0 4px;
+    padding-left: 18px;
+}
+
+.blog-post-body p {
+    margin: 10px 0;
 }
 
 footer {

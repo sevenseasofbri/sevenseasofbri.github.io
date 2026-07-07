@@ -1,0 +1,11 @@
+{
+  "title": "hello, world",
+  "date": "2026-07-07",
+  "summary": "this blog is born.",
+  "tags": [
+    "firstpost"
+  ],
+  "body": [
+    "i am keeping a blog page so it forces me to articulate the things i think about on a daily basis. beware of (not very well researched) thinkpieces, opinions, and just general geeking out about things i like (robots, hci, public transport, books)."
+  ]
+}
