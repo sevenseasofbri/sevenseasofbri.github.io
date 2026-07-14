@@ -1,5 +1,44 @@
 [
   {
+    "title": "On the Need for Confidence-Based Assessment in Software Engineering Education",
+    "authors": [
+      "Vishruti Ranjan",
+      "Pranav Dangi",
+      "Akshay Narayan"
+    ],
+    "publicationDate": "2026-07-01",
+    "venue": "38th International Conference on Software Engineering Education and Training (CSEE&T)",
+    "summary": "",
+    "pdfUrl": "papers/CSEET26.pdf",
+    "links": [
+      {
+      }
+    ]
+  },
+  {
+    "title": "HiVec: A Scalable and Energy Efficient CGRA in a RISC-V SoC for Wearables",
+    "authors": [
+      "Rakshith Harish",
+      "Rohan Juneja",
+      "Pranav Dangi",
+      "Zhenyu Bai",
+      "Vishnu Nambiar",
+      "Yi Sheng Chong",
+      "Bin Zhao",
+      "Vishruti Ranjan",
+      "Rahul Dutta",
+      "Li-Shiuan Peh",
+      "Tulika Mitra",
+      "Anh Tuan Do"
+    ],
+    "publicationDate": "2026-08-01",
+    "venue": "38th IEEE Hot Chips Symposium (Hot Chips)",
+    "summary": "",
+    "pdfUrl": "papers/HOTCHIPS26.pdf",
+    "links": [
+    ]
+  },
+  {
     "title": "COMPOSE: Static Timing-driven Composable Reconfigurable Architecture for Accelerating Recurrence-Bound Loops",
     "authors": [
       "Rohan Juneja",
@@ -9,15 +48,12 @@
     ],
     "publicationDate": "2026-06-19",
     "venue": "arXiv preprint arXiv:2606.21454",
-    "summary": "Introduces COMPOSE, a composable CGRA architecture that uses static timing information to fuse operations across loop iterations, reduce register pressure, and improve throughput for recurrence-bound loops.",
+    "summary": "",
+    "pdfUrl": "papers/COMPOSE26.pdf",
     "links": [
       {
-        "label": "paper",
+        "label": "arxiv",
         "url": "https://arxiv.org/abs/2606.21454"
-      },
-      {
-        "label": "pdf",
-        "url": "https://arxiv.org/pdf/2606.21454"
       }
     ]
   },
@@ -29,10 +65,11 @@
     "publicationDate": "2026-02-18",
     "venue": "Proceedings of the 57th ACM Technical Symposium on Computer Science Education V. 2",
     "pages": "1750",
-    "summary": "Explores wearable electrotactile feedback as a scalable embodied learning aid for dexterous classroom skills, with a focus on unobtrusive closed-loop systems informed by EMG-based muscle synergy analysis.",
+    "summary": "",
+    "pdfUrl": "papers/SIGCSE26.pdf",
     "links": [
       {
-        "label": "paper",
+        "label": "acm",
         "url": "https://dl.acm.org/doi/abs/10.1145/3770761.3777060"
       }
     ]

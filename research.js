@@ -1,12 +1,12 @@
 const researchList = document.getElementById("research-list");
+const highlightedAuthor = "Vishruti Ranjan";
 
 const formatPublicationDate = (dateString) => {
     const date = new Date(`${dateString}T00:00:00`);
 
     return date.toLocaleDateString("en", {
         year: "numeric",
-        month: "short",
-        day: "numeric"
+        month: "short"
     }).toLowerCase();
 };
 
@@ -39,26 +39,45 @@ const renderLinks = (links) => {
     return linksElement;
 };
 
+const renderAuthors = (authorList) => {
+    const authors = document.createElement("p");
+    authors.className = "publication-authors";
+
+    authorList.forEach((author, index) => {
+        if (index > 0) {
+            authors.append(", ");
+        }
+
+        if (author === highlightedAuthor) {
+            const strong = document.createElement("strong");
+            strong.textContent = author;
+            authors.append(strong);
+        } else {
+            authors.append(author);
+        }
+    });
+
+    return authors;
+};
+
 const renderPublication = (publication) => {
     const article = document.createElement("article");
     article.className = "publication";
 
     const title = document.createElement("h3");
-    const titleLink = publication.links?.[0];
+    const titleLink = publication.pdfUrl || publication.links?.[0]?.url;
 
     if (titleLink) {
         const anchor = createExternalLink({
             label: publication.title,
-            url: titleLink.url
+            url: titleLink
         });
         title.append(anchor);
     } else {
         title.textContent = publication.title;
     }
 
-    const authors = document.createElement("p");
-    authors.className = "publication-authors";
-    authors.textContent = publication.authors.join(", ");
+    const authors = renderAuthors(publication.authors);
 
     const metadata = document.createElement("p");
     metadata.className = "publication-meta";
@@ -98,8 +117,12 @@ fetch("research.json")
         return response.json();
     })
     .then(renderResearch)
-    .catch(() => {
+    .catch((error) => {
+        console.error("Research section failed to load:", error);
+
         const message = document.createElement("p");
-        message.textContent = "publications are taking a short detour. please refresh later.";
+        message.textContent = window.location.protocol === "file:"
+            ? "publications need a local server to load. try http://127.0.0.1:62026/ instead of opening index.html directly."
+            : "publications are taking a short detour. please refresh later.";
         researchList.replaceChildren(message);
     });
