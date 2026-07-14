@@ -73,5 +73,40 @@
         "url": "https://dl.acm.org/doi/abs/10.1145/3770761.3777060"
       }
     ]
+  },
+  {
+    "title": "E-MagDiP: Electro-Magnetic based Differential Privacy for EEG based Community Sensing",
+    "authors": [
+      "Ayanga Kalupahana",
+      "Vishruti Ranjan",
+      "Li-Shiuan Peh"
+    ],
+    "publicationDate": "2026-06-01",
+    "venue": "Under review",
+    "summary": "",
+    "pdfUrl": "papers/EMAGDIP26.pdf",
+    "links": [
+      {
+      }
+    ]
+  },
+  {
+    "title": "EdgeWizard: A Motion-Resilient EEG Wearable with On-Device Processing Using Reconfigurable Fabric",
+    "authors": [
+      "Teck Lun Goh",
+      "Rohan Juneja",
+      "Vishruti Ranjan",
+      "Shivam Aggarwal",
+      "Tulika Mitra",
+      "Li-Shiuan Peh"
+    ],
+    "publicationDate": "2026-03-01",
+    "venue": "Under review",
+    "summary": "",
+    "pdfUrl": "papers/EDGEWIZARD26.pdf",
+    "links": [
+      {
+      }
+    ]
   }
 ]
