@@ -1,5 +1,6 @@
 {
   "posts": [
-    "blog-posts/hello-world.json"
+    "blog-posts/hello-world.json",
+    "blog-posts/robot.json"
   ]
 }

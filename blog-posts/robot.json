@@ -1,0 +1,15 @@
+{
+  "title": "ragebaited by humanoid robots",
+  "date": "2026-07-14",
+  "summary": "ragebaited by everyone wanting to make humanoid robots.",
+  "tags": [
+    "robotics", "opinions"
+  ],
+  "body": [
+    "the one-size-fits-all rhetoric of capitalism caters to innovation that focuses on 'generic specialisation'. specialised enough to seem useful, generic enough to scale. so companies can pump out the same kind of thing without changing it or the production process all that much and it works for a variety of tasks. thats why we have LLMs that are generic 'all-knowing' entities. i think achieving this took a fair bit of creativity but I can't help but think this may not work for something that is being heavily pushed at the moment -- humanoid robots. ",
+    "a logical reason behind why this push exists is exactly because of this 'generic specialisation.' companies want robots in human spaces, which are, well, designed for humans and optimized for humans (debatable, see underdeveloped car-centric cities, but that is besides the point). the argument is that only a humanoid or human-like robot would thrive in a space designed and optimized for humans. ",
+    "first of all, our hubris has led us to believe in our optimality and the need for our technological innovations to replicate us. humanoid robots are unnecessarily bulky, complex and power hungry. the algorithms to make them do things like housework, which is what they are being heavily advertised for, are complicated -- think of object detection, path planning, grasp planning, path replanning and SO MANY MORE STEPS. i think they are interesting from a 'can we get a robot to actually do this' approach but there is no way this is the optimal way to do it. ",
+    "even if optimality is not the end goal, but instead a more comfortable user experience with a more 'familiar feeling', I think there is always a way to induce anthropomorphism without having to physically change the quality attributes of the robot. besides, a humanoid is more uncanny valley if anything.",
+    "also i think the fundamental question is -- why do we want robots in our homes in this manner? is having one robot that can do all tasks, one at a time, better than say your dishwasher and robot vacuum working at the same time? what are we optimizing out of our lives? the things that make us human?"
+]
+}

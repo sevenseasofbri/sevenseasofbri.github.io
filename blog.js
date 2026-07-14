@@ -83,7 +83,7 @@ const renderBlogPosts = (posts) => {
     blogPostList.replaceChildren(...sortedPosts.map(renderBlogPostPreview));
 };
 
-fetch("blog-posts.json")
+fetch("blog-posts.json", { cache: "no-cache" })
     .then((response) => {
         if (!response.ok) {
             throw new Error("Could not load blog-posts.json");
@@ -92,7 +92,7 @@ fetch("blog-posts.json")
         return response.json();
     })
     .then((manifest) => Promise.all(
-        manifest.posts.map((postPath) => fetch(postPath).then((response) => {
+        manifest.posts.map((postPath) => fetch(postPath, { cache: "no-cache" }).then((response) => {
             if (!response.ok) {
                 throw new Error(`Could not load ${postPath}`);
             }
@@ -101,7 +101,9 @@ fetch("blog-posts.json")
         }))
     ))
     .then(renderBlogPosts)
-    .catch(() => {
+    .catch((error) => {
+        console.error("Blog failed to load:", error);
+
         const message = document.createElement("p");
         message.textContent = "the blog is taking a short detour. please refresh later.";
         blogPostList.replaceChildren(message);
