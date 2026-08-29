@@ -39,12 +39,13 @@ const renderBody = (body) => {
     return bodyElement;
 };
 
-const renderBlogPostPreview = (post) => {
-    const postElement = document.createElement("details");
+const renderBlogPostPreview = (post, postId) => {
+    const postElement = document.createElement("article");
     postElement.className = "blog-post-preview";
 
-    const summaryElement = document.createElement("summary");
-    summaryElement.className = "blog-post-summary";
+    const link = document.createElement("a");
+    link.href = `blog-post.html?id=${postId}`;
+    link.className = "blog-post-link";
 
     const date = document.createElement("p");
     date.className = "blog-post-date";
@@ -56,19 +57,19 @@ const renderBlogPostPreview = (post) => {
     const summary = document.createElement("p");
     summary.textContent = post.summary;
 
-    summaryElement.append(date, title, summary);
+    link.append(date, title, summary);
 
     const tags = renderTags(post.tags);
     if (tags) {
-        summaryElement.append(tags);
+        link.append(tags);
     }
 
-    postElement.append(summaryElement, renderBody(post.body));
+    postElement.append(link);
 
     return postElement;
 };
 
-const renderBlogPosts = (posts) => {
+const renderBlogPosts = (posts, postIds) => {
     const sortedPosts = [...posts].sort(
         (a, b) => new Date(b.date) - new Date(a.date)
     );
@@ -80,7 +81,11 @@ const renderBlogPosts = (posts) => {
         return;
     }
 
-    blogPostList.replaceChildren(...sortedPosts.map(renderBlogPostPreview));
+    const sortedIndices = [...posts].map((_, i) => i).sort(
+        (a, b) => new Date(posts[b].date) - new Date(posts[a].date)
+    );
+
+    blogPostList.replaceChildren(...sortedIndices.map(i => renderBlogPostPreview(posts[i], postIds[i])));
 };
 
 fetch("blog-posts.json", { cache: "no-cache" })
@@ -91,16 +96,21 @@ fetch("blog-posts.json", { cache: "no-cache" })
 
         return response.json();
     })
-    .then((manifest) => Promise.all(
-        manifest.posts.map((postPath) => fetch(postPath, { cache: "no-cache" }).then((response) => {
-            if (!response.ok) {
-                throw new Error(`Could not load ${postPath}`);
-            }
+    .then((manifest) => {
+        const postIds = manifest.posts.map(path => path.replace("blog-posts/", "").replace(".json", ""));
+        return Promise.all(
+            manifest.posts.map((postPath) => fetch(postPath, { cache: "no-cache" }).then((response) => {
+                if (!response.ok) {
+                    throw new Error(`Could not load ${postPath}`);
+                }
 
-            return response.json();
-        }))
-    ))
-    .then(renderBlogPosts)
+                return response.json();
+            }))
+        ).then(posts => ({ posts, postIds }));
+    })
+    .then((data) => {
+        renderBlogPosts(data.posts, data.postIds);
+    })
     .catch((error) => {
         console.error("Blog failed to load:", error);
 

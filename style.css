@@ -191,19 +191,17 @@ p, li {
     margin-bottom: 0;
 }
 
-.blog-post-summary {
-    cursor: pointer;
+.blog-post-link {
+    text-decoration: none;
+    color: inherit;
     display: block;
-    list-style: none;
     padding-right: 34px;
     position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.blog-post-summary::-webkit-details-marker {
-    display: none;
-}
-
-.blog-post-summary::after {
+.blog-post-link::after {
     color: #6a5acd;
     content: "(⁠^⁠ᴗ⁠^✿⁠)";
     font-size: 1.4em;
@@ -211,14 +209,15 @@ p, li {
     position: absolute;
     right: 4px;
     top: 6px;
+    transition: all 0.2s ease;
 }
 
-.blog-post-preview[open] .blog-post-summary::after {
-    content: "(⁠◕⁠ᴗ⁠◕⁠✿⁠)";
-}
-
-.blog-post-summary:hover h3 {
+.blog-post-link:hover {
     color: #6a5acd;
+}
+
+.blog-post-link:hover::after {
+    content: "(⁠◕⁠ᴗ⁠◕⁠✿⁠)";
 }
 
 .blog-post-preview h3 {
@@ -226,6 +225,10 @@ p, li {
     font-size: 1.2em;
     line-height: 1.35;
     margin: 4px 0 8px;
+}
+
+.blog-post-link:hover h3 {
+    color: #6a5acd;
 }
 
 .blog-post-preview p {
@@ -246,6 +249,29 @@ p, li {
     border-left: 2px dashed #ccc;
     margin: 16px 0 0 4px;
     padding-left: 18px;
+}
+
+.blog-post-full {
+    max-width: 850px;
+}
+
+.blog-post-full h1 {
+    color: #857cc5;
+    font-size: 1.6em;
+    line-height: 1.4;
+    margin: 16px 0 12px;
+}
+
+.back-link {
+    color: #6a5acd;
+    text-decoration: none;
+    margin-bottom: 32px;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.back-link:hover {
+    text-decoration: underline;
 }
 
 .blog-post-body p {
