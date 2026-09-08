@@ -36,6 +36,10 @@
     "summary": "",
     "pdfUrl": "papers/HOTCHIPS26.pdf",
     "links": [
+      {
+        "label": "pdf",
+        "url": "papers/HOTCHIPS26.pdf"
+      }
     ]
   },
   {
@@ -47,10 +51,14 @@
       "Li-Shiuan Peh"
     ],
     "publicationDate": "2026-06-19",
-    "venue": "arXiv preprint arXiv:2606.21454",
+    "venue": "Under review",
     "summary": "",
     "pdfUrl": "papers/COMPOSE26.pdf",
     "links": [
+      {
+        "label": "pdf",
+        "url": "papers/COMPOSE26.pdf"
+      },
       {
         "label": "arxiv",
         "url": "https://arxiv.org/abs/2606.21454"
@@ -68,6 +76,10 @@
     "summary": "",
     "pdfUrl": "papers/SIGCSE26.pdf",
     "links": [
+      {
+        "label": "pdf",
+        "url": "papers/SIGCSE26.pdf"
+      },
       {
         "label": "acm",
         "url": "https://dl.acm.org/doi/abs/10.1145/3770761.3777060"
@@ -87,6 +99,12 @@
     "pdfUrl": "papers/EMAGDIP26.pdf",
     "links": [
       {
+        "label": "pdf",
+        "url": "papers/EMAGDIP26.pdf"
+      },
+      {
+        "label": "arxiv",
+        "url": "https://arxiv.org/abs/2607.25968"
       }
     ]
   },
