@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="content-page">
+    <section>
+        <a href="{{ '/index.html' | relative_url }}" class="back-link">&larr; back to home</a>
+        <article>
+            <h1>{{ page.title | escape }}</h1>
+            <div class="page-body">
+                {{ content }}
+            </div>
+        </article>
+    </section>
+</div>

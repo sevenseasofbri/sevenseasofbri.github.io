@@ -1,0 +1,20 @@
+title: vishruti ranjan
+url: https://vishrutiranjan.com
+baseurl: ""
+timezone: Asia/Singapore
+permalink: /blog-posts/:title.html
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - templates
+  - SITE-GUIDE.txt
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .tmp

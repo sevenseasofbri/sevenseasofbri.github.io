@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="blog-page">
+    <section>
+        <a href="{{ '/blog.html' | relative_url }}" class="back-link">&larr; back to all posts</a>
+        <article class="blog-post-full">
+            <p class="blog-post-date"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%-d %B %Y' | downcase }}</time></p>
+            <h1>{{ page.title | escape }}</h1>
+            {% if page.tags.size > 0 %}
+            <p class="blog-post-tags">{% for tag in page.tags %}#{{ tag | escape }}{% unless forloop.last %} {% endunless %}{% endfor %}</p>
+            {% endif %}
+            <div class="blog-post-body">
+                {{ content }}
+            </div>
+        </article>
+    </section>
+</div>

@@ -172,7 +172,8 @@ p, li {
     margin-right: 12px;
 }
 
-.blog-page section {
+.blog-page section,
+.content-page section {
     max-width: 850px;
 }
 
@@ -255,7 +256,8 @@ p, li {
     max-width: 850px;
 }
 
-.blog-post-full h1 {
+.blog-post-full h1,
+.content-page h1 {
     color: #857cc5;
     font-size: 1.6em;
     line-height: 1.4;
@@ -276,6 +278,44 @@ p, li {
 
 .blog-post-body p {
     margin: 10px 0;
+}
+
+.blog-post-body,
+.page-body {
+    overflow-wrap: anywhere;
+}
+
+.blog-post-body img,
+.page-body img {
+    max-width: 100%;
+    height: auto;
+}
+
+.blog-post-body pre,
+.page-body pre {
+    overflow-x: auto;
+    padding: 16px;
+    background: #f5f3fa;
+}
+
+.blog-post-body blockquote,
+.page-body blockquote {
+    border-left: 3px solid #a29ad3;
+    margin: 20px 0;
+    padding-left: 18px;
+    color: #555;
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        gap: 8px 16px;
+        padding: 10px;
+    }
+
+    .blog-post-body {
+        margin-left: 0;
+        padding-left: 12px;
+    }
 }
 
 footer {

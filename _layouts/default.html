@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v=11">
+    <link rel="icon" type="image/png" href="{{ '/images/favicon_transparent.png' | relative_url }}">
+</head>
+<body>
+    <nav aria-label="main navigation">
+        <ul>
+            <li><a href="{{ '/index.html' | relative_url }}#about">about</a></li>
+            <li><a href="{{ '/index.html' | relative_url }}#education">education</a></li>
+            <li><a href="{{ '/index.html' | relative_url }}#experience">experience</a></li>
+            <li><a href="{{ '/index.html' | relative_url }}#research">research</a></li>
+            <li><a href="{{ '/index.html' | relative_url }}#teaching">teaching</a></li>
+            <li><a{% if page.url == '/blog.html' or page.layout == 'post' %} class="active"{% endif %} href="{{ '/blog.html' | relative_url }}">blog</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>last updated <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%-d %B %Y' | downcase }}</time></p>
+    </footer>
+
+    {% for script in page.scripts %}
+    <script src="{{ script | relative_url }}"></script>
+    {% endfor %}
+</body>
+</html>

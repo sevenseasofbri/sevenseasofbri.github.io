@@ -1,0 +1,68 @@
+EDITING THIS SITE
+
+GitHub Pages builds these HTML files with Jekyll. You write the content;
+the shared layouts add navigation, styling, headings, and the footer.
+No JSON is needed for blog posts or standalone pages.
+
+ADD A BLOG POST
+
+1. Copy templates/post.html into _posts/.
+2. Name it YYYY-MM-DD-your-post-name.html, for example
+   _posts/2026-11-03-learning-with-wearables.html.
+   The date in the filename is the publication date.
+3. Edit the title, summary, and optional tags between the --- lines.
+   Keep those lines at the very beginning of the file. Quote titles and
+   summaries, especially if they contain a colon. For literal double
+   quotes inside a double-quoted value, use \".
+4. Write the body below them using normal HTML: <p>, <h2>, <ul>, <a>, etc.
+5. Commit and push as usual. The blog listing updates automatically,
+   newest first. This example's URL will be
+   /blog-posts/learning-with-wearables.html.
+
+The existing posts are in _posts/ and show complete examples.
+The template directory is excluded from the published website.
+Keep publication dates at today or earlier; future posts are held until
+a build on or after their date. There is no scheduled publishing task.
+For drafts, add published: false inside the --- lines.
+
+ADD A STANDALONE PAGE (FOR EXAMPLE, A TEACHING STATEMENT)
+
+1. Copy templates/page.html to teaching-statement.html in the root folder.
+2. Change its title and replace the example HTML with your own content.
+3. Add this link to index.html wherever you want it to appear:
+   <a href="{{ '/teaching-statement.html' | relative_url }}">teaching statement</a>
+4. Commit and push. The page uses the same navigation, style, and footer.
+
+Use an <h2> for headings within a page/post; the layout adds the <h1>.
+You do not need to copy <html>, <head>, navigation, or footer markup.
+To add a link to the navigation on every page, edit _layouts/default.html.
+For images, use paths relative to the site root, for example:
+<img src="{{ '/images/my-image.jpg' | relative_url }}" alt="Describe the image">
+For links to other pages from posts, use relative_url in the same way.
+
+AUTOMATIC LAST UPDATED
+
+The shared footer uses Jekyll's build time in Asia/Singapore. All pages
+show the date of the most recent site build, including changes to posts,
+publications, and shared styling. It stays fixed between builds and
+does not change when a visitor opens the page. A rebuild without content
+changes will also update this date. Individual post publication dates
+come from their filenames and stay unchanged.
+
+PUBLISHING AND LOCAL PREVIEW
+
+In the repository's Settings > Pages, use "Deploy from a branch" with
+your publishing branch and "/ (root)". GitHub Pages runs Jekyll for you;
+no custom workflow or extra Jekyll plugins are needed. If you use a custom
+Actions workflow instead, it must build Jekyll before uploading _site.
+
+For a local preview, install Ruby with Bundler, then run:
+  bundle install
+  bundle exec jekyll serve
+Open http://127.0.0.1:4000. Restart the server after changing _config.yml.
+Opening source files directly, or using only python -m http.server,
+does not process the shared layouts. To serve the completed output with
+a plain server, first run bundle exec jekyll build, then serve _site/.
+
+Old blog-post.html?id=hello-world and ?id=robot links still redirect to
+the corresponding new HTML pages.
